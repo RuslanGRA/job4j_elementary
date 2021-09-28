@@ -9,9 +9,9 @@ public class Calculator {
         int six = 6;
         int four = 4;
         int five = 5;
-        int sixDivTwo = 6 / 2;
-        int fourTimeTwo = 4 * 2;
-        int fiveMinusTwo = 5 - 2;
+        int sixDivTwo = six / two;
+        int fourTimeTwo = four * two;
+        int fiveMinusTwo = five - two;
         System.out.println(sixDivTwo);
         System.out.println(fourTimeTwo);
         System.out.println(fiveMinusTwo);
