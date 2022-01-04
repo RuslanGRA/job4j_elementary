@@ -7,12 +7,12 @@ public class PointTest {
 
     @Test
     public void when00to20then2() {
-        double expected = 0;
+        double expected = 2;
         int x1 = 0;
         int y1 = 0;
         int x2 = 2;
         int y2 = 0;
-        double out = Point.distance(1, 1, 2, 2);
+        double out = Point.distance(x1, x2, y1, y2);
         Assert.assertEquals(expected, out, 0.01);
     }
 
@@ -23,7 +23,7 @@ public class PointTest {
         int y1 = 1;
         int x2 = 0;
         int y2 = 0;
-        double out = Point.distance(1, 1, 1, 2);
+        double out = Point.distance(x1, x2, y1, y2);
         Assert.assertEquals(expected, out, 0.01);
     }
 
@@ -33,8 +33,8 @@ public class PointTest {
         int x1 = 1;
         int y1 = 1;
         int x2 = 0;
-        int y2 = 0;
-        double out = Point.distance(0, 1, 0, 0);
+        int y2 = 1;
+        double out = Point.distance(x1, x2, y1, y2);
         Assert.assertEquals(expected, out, 0.01);
     }
 }
