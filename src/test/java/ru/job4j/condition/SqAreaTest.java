@@ -25,14 +25,12 @@ public class SqAreaTest {
 
     @Test
     public void whenP8K1Square4() {
-        int expected = 4;
         double out = SqArea.square(8, 1);
         Assert.assertEquals(4, out, 0.01);
     }
 
     @Test
     public void whenP4K1Square1() {
-        int expected = 1;
         double out = SqArea.square(4, 1);
         Assert.assertEquals(1, out, 0.01);
     }
