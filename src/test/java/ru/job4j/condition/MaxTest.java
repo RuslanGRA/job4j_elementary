@@ -6,11 +6,11 @@ import org.junit.Assert;
 public class MaxTest {
 
     @Test
-    public void whenMax1To2Then2() {
+    public void whenMax1To0Then1() {
         int left = 1;
-        int right = 2;
+        int right = 0;
         int result = Max.max(left, right);
-        int expected = 2;
+        int expected = 1;
         Assert.assertEquals(result, expected);
     }
 
