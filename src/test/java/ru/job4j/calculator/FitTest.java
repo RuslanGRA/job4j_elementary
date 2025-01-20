@@ -1,23 +1,44 @@
 package ru.job4j.calculator;
 
-import org.junit.Test;
-import org.junit.Assert;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertEquals;
 
 public class FitTest {
 
     @Test
-    public void whenMan180Then92() {
-        short in = 180;
-        double expected = 92;
-        double out = Fit.manWeight(in);
-        Assert.assertEquals(expected, out, 0.01);
+    public void whenManHeight187ThenWeight100() {
+        short height = 187;
+        double expected = (187 - 100) * 1.15; // 100.05
+        double actual = Fit.idealWeight(height, true);
+        double delta = 0.01; // Точность округления
+        assertEquals(expected, actual, delta);
     }
 
     @Test
-    public void whenWoman170Then69() {
-        short in = 170;
-        double expected = 69;
-        double out = Fit.womanWeight(in);
-        Assert.assertEquals(expected, out, 0.01);
+    public void whenWomanHeight170ThenWeight69() {
+        short height = 170;
+        double expected = (170 - 110) * 1.15; // 69.00
+        double actual = Fit.idealWeight(height, false);
+        double delta = 0.01;
+        assertEquals(expected, actual, delta);
+    }
+
+    @Test
+    public void whenManHeight170ThenWeight80() {
+        short height = 170;
+        double expected = (170 - 100) * 1.15; // 80.50
+        double actual = Fit.idealWeight(height, true);
+        double delta = 0.01;
+        assertEquals(expected, actual, delta);
+    }
+
+    @Test
+    public void whenWomanHeight160ThenWeight57() {
+        short height = 160;
+        double expected = (160 - 110) * 1.15; // 57.50
+        double actual = Fit.idealWeight(height, false);
+        double delta = 0.01;
+        assertEquals(expected, actual, delta);
     }
 }
