@@ -1,7 +1,6 @@
 package ru.job4j.calculator;
 
-
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class FitTest {
